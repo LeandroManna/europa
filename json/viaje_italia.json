@@ -43,10 +43,10 @@
         "check_in": "Domingo 11-05-2025",
         "check_out": "Martes 13-05-2025",
         "noches": 2, 
-        "ubicacion": "Hotel Ibis Milano Ca Granda", 
-        "link": "https://www.booking.com/hotel/it/hotelibismilanocagranda.es.html?aid=2167705&label=prWaRLU6bw4TNQuj&sid=9ddd143f2862be18a1c0d9227a3b1a08&all_sr_blocks=8144804_382238086_2_34_0&checkin=2025-05-11&checkout=2025-05-13&dest_id=-121726&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=8144804_382238086_2_34_0&hpos=1&matching_block_id=8144804_382238086_2_34_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=8144804_382238086_2_34_0__14320&srepoch=1741014832&srpvid=f4606b12ebb40028&type=total&ucfs=1&#hotelTmpl",
+        "ubicacion": "Hotel Atena", 
+        "link": "https://maps.app.goo.gl/hwWg2EvetpMvX3LJ8",
         "target": "_blank",
-        "precio": "$167000"
+        "precio": "US$ 196,64"
       },
       {
         "imagen": "assets/img/roma.jpg",
