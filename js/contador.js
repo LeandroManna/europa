@@ -25,4 +25,4 @@ function iniciarContador(fechaSalida) {
 }
 
 // Definir la fecha de salida del vuelo (Ajusta el formato YYYY-MM-DD HH:MM:SS)
-iniciarContador("2025-05-10 03:35:00");
+iniciarContador("2026-05-18 12:15:00");
