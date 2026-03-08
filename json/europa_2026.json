@@ -1,0 +1,206 @@
+{
+  "viaje": {
+    "titulo": "Tour Europa 2026: España, Italia y Alpes",
+    "fechas": {
+      "salida": "18-05-2026",
+      "llegada": "19-05-2026",
+      "regreso": "01-06-2026"
+    },
+    "vuelos": {
+      "ida": {
+        "origen": "Buenos Aires (EZE)",
+        "escala": "Santiago (SCL)",
+        "destino": "Madrid (MAD)",
+        "horario_salida": "Lunes 18-05-2026 12:15",
+        "duracion_total": "20 h 50 min",
+        "horario_llegada": "Martes 19-05-2026 14:05",
+        "aerolinea": "LATAM Airlines",
+        "imagen": "assets/img/avionlatam.jpg"
+      },
+      "regreso": {
+        "origen": "Madrid (MAD)",
+        "escala": "São Paulo (GRU)",
+        "destino": "Buenos Aires (EZE)",
+        "horario_salida": "Lunes 01-06-2026 14:45",
+        "duracion_total": "15 h 15 min",
+        "horario_llegada": "Martes 02-06-2026 01:00",
+        "aerolinea": "LATAM Airlines",
+        "imagen": "assets/img/avionlatam2.jpg"
+      }
+    },
+    "alojamiento": [
+      {
+        "ciudad": "Madrid",
+        "zona": "Usera / Vallecas",
+        "check_in": "19-05-2026",
+        "check_out": "21-05-2026",
+        "noches": 2,
+        "nota": "Zona económica con conexión directa de Metro al centro."
+      },
+      {
+        "ciudad": "Barcelona",
+        "zona": "L'Hospitalet de Llobregat",
+        "check_in": "21-05-2026",
+        "check_out": "24-05-2026",
+        "noches": 3,
+        "nota": "Cerca del Camp Nou y con Metro directo a Plaza Cataluña."
+      },
+      {
+        "ciudad": "Milán",
+        "zona": "Sesto San Giovanni",
+        "check_in": "24-05-2026",
+        "check_out": "27-05-2026",
+        "noches": 3,
+        "nota": "Base estratégica para ir al Lago di Como y Alpes Suizos."
+      },
+      {
+        "ciudad": "Roma",
+        "zona": "Via Tiburtina / Ostiense",
+        "check_in": "27-05-2026",
+        "check_out": "31-05-2026",
+        "noches": 4,
+        "nota": "Zona con excelentes precios y conexión de tren/metro."
+      },
+      {
+        "ciudad": "Madrid",
+        "zona": "Cerca de Aeropuerto / Barajas",
+        "check_in": "31-05-2026",
+        "check_out": "01-06-2026",
+        "noches": 1,
+        "nota": "Noche final para asegurar el vuelo de regreso."
+      }
+    ],
+    "itinerario": [
+      {
+        "fecha": "Martes 19-05",
+        "ciudad": "Madrid",
+        "actividades": [
+          "Llegada a Madrid Barajas (14:05)",
+          "Traslado y check-in en zona Usera/Vallecas",
+          "Paseo por Gran Vía y Puerta del Sol"
+        ]
+      },
+      {
+        "fecha": "Miércoles 20-05",
+        "ciudad": "Madrid",
+        "actividades": [
+          "Tour del Estadio Santiago Bernabéu",
+          "Paseo por el Parque del Retiro",
+          "Tarde de tapas en Mercado de San Miguel"
+        ]
+      },
+      {
+        "fecha": "Jueves 21-05",
+        "ciudad": "Barcelona",
+        "traslado": "Tren Alta Velocidad Low Cost (Ouigo/Iryo)",
+        "actividades": [
+          "Llegada a Barcelona Sants",
+          "Check-in en L'Hospitalet",
+          "Paseo por Las Ramblas y Barrio Gótico"
+        ]
+      },
+      {
+        "fecha": "Viernes 22-05",
+        "ciudad": "Barcelona",
+        "actividades": [
+          "Camp Nou (Museo y Experiencia Inmersiva)",
+          "Visita a la Sagrada Familia (Exterior)",
+          "Atardecer en los Búnkers del Carmel"
+        ]
+      },
+      {
+        "fecha": "Sábado 23-05",
+        "ciudad": "Barcelona",
+        "actividades": [
+          "Día de playa en la Barceloneta",
+          "Parque Güell",
+          "Cena en el barrio de Gràcia"
+        ]
+      },
+      {
+        "fecha": "Domingo 24-05",
+        "ciudad": "Milán",
+        "traslado": "Vuelo Low Cost (Ryanair/Vueling) BCN-Milán",
+        "actividades": [
+          "Check-in en Sesto San Giovanni",
+          "Visita al Duomo de Milán y Galería Vittorio Emanuele II",
+          "Cena en Navigli"
+        ]
+      },
+      {
+        "fecha": "Lunes 25-05",
+        "ciudad": "Lago di Como",
+        "traslado": "Tren regional Milán-Varenna (1h)",
+        "actividades": [
+          "Recorrido por Varenna",
+          "Ferry a Bellagio",
+          "Regreso a dormir a Milán (sin valijas)"
+        ]
+      },
+      {
+        "fecha": "Martes 26-05",
+        "ciudad": "Alpes Suizos",
+        "traslado": "Tren Milán-Tirano + Bernina Express",
+        "actividades": [
+          "Cruce de los Alpes en tren panorámico",
+          "Visita a St. Moritz (Suiza)",
+          "Regreso a dormir a Milán (sin valijas)"
+        ]
+      },
+      {
+        "fecha": "Miércoles 27-05",
+        "ciudad": "Roma",
+        "traslado": "Tren rápido Italo Milán-Roma (3h)",
+        "actividades": [
+          "Llegada a Roma Tiburtina",
+          "Fontana di Trevi y Panteón",
+          "Piazza Navona"
+        ]
+      },
+      {
+        "fecha": "Jueves 28-05",
+        "ciudad": "Roma",
+        "actividades": [
+          "Coliseo Romano y Foro Romano",
+          "Monte Palatino",
+          "Cena en el barrio de Trastevere"
+        ]
+      },
+      {
+        "fecha": "Viernes 29-05",
+        "ciudad": "Roma",
+        "actividades": [
+          "Museos Vaticanos y Capilla Sixtina",
+          "Basílica de San Pedro",
+          "Castel Sant'Angelo"
+        ]
+      },
+      {
+        "fecha": "Sábado 30-05",
+        "ciudad": "Roma",
+        "actividades": [
+          "Día libre para compras o Villa Borghese",
+          "Opcional: Catacumbas de Roma",
+          "Última cena italiana"
+        ]
+      },
+      {
+        "fecha": "Domingo 31-05",
+        "ciudad": "Madrid",
+        "traslado": "Vuelo Roma-Madrid (Omio, 40 USD)",
+        "actividades": [
+          "Llegada a Madrid y check-in cerca del aeropuerto",
+          "Última caminata por Madrid y compras de último minuto"
+        ]
+      },
+      {
+        "fecha": "Lunes 01-06",
+        "ciudad": "Regreso",
+        "actividades": [
+          "Traslado al Aeropuerto Barajas",
+          "Vuelo de salida (14:45)"
+        ]
+      }
+    ]
+  }
+}
