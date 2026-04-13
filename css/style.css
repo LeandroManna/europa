@@ -28,7 +28,7 @@ body::before {
 /* Imagen para dispositivos móviles */
 @media (max-width: 767px) {
     body::before {
-        background-image: url('../assets/img/bg-milan.jpg');
+        background-image: url('../assets/img/españa.jpeg');
     }
 }
 
