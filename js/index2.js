@@ -7,17 +7,18 @@ fetch("json/europa_2026.json")
     const vuelosContainer = document.getElementById("vuelos-container");
     Object.keys(viaje.vuelos).forEach((tipo) => {
       const vuelo = viaje.vuelos[tipo];
+      const label = tipo.charAt(0).toUpperCase() + tipo.slice(1);
 
       const col = document.createElement("div");
       col.className = "col-md-6";
       col.innerHTML = `
-        <div class="card mb-3" style="cursor:pointer;">
+        <div class="card h-100" style="cursor:pointer;">
           <div class="card-body">
-            <h5 class="card-title">Vuelo ${tipo.charAt(0).toUpperCase() + tipo.slice(1)}</h5>
-            <p class="card-text">
-              <b>${vuelo.origen}</b> → <b>${vuelo.destino}</b><br>
-              <small class="text-muted">${vuelo.horario_salida} · ${vuelo.duracion_total}</small>
-            </p>
+            <span class="card-badge badge-vuelo">${label}</span>
+            <h5 class="card-title">${vuelo.origen} → ${vuelo.destino}</h5>
+            <p class="card-text">${vuelo.aerolinea}</p>
+            <p class="card-text"><b>${vuelo.horario_salida}</b></p>
+            <p class="card-subtitle">Escala: ${vuelo.escala} · ${vuelo.duracion_total}</p>
           </div>
         </div>`;
 
@@ -31,7 +32,7 @@ fetch("json/europa_2026.json")
         <b>Duración total:</b> ${vuelo.duracion_total}`;
 
       col.querySelector(".card").addEventListener("click", () => {
-        mostrarModal(`Vuelo ${tipo}`, vuelo.imagen || "", contenido);
+        mostrarModal(`Vuelo ${label} — ${vuelo.origen} → ${vuelo.destino}`, vuelo.imagen || "", contenido);
       });
 
       vuelosContainer.appendChild(col);
@@ -40,17 +41,20 @@ fetch("json/europa_2026.json")
     // ── Alojamientos ────────────────────────────────────────
     const alojamientoContainer = document.getElementById("alojamiento-container");
     viaje.alojamiento.forEach((aloja) => {
+      const esSugerencia = aloja.sugerencia === true;
+      const badgeClass = esSugerencia ? "badge-aloj-sug" : "badge-aloj";
+      const badgeLabel = esSugerencia
+        ? `${aloja.ciudad} · ${aloja.noches} noche${aloja.noches > 1 ? "s" : ""} · sugerido`
+        : `${aloja.ciudad} · ${aloja.noches} noche${aloja.noches > 1 ? "s" : ""}`;
 
       const col = document.createElement("div");
-      col.className = "col-md-4";
+      col.className = "col-md-4 col-sm-6";
       col.innerHTML = `
-        <div class="card mb-3" style="cursor:pointer;">
+        <div class="card h-100" style="cursor:pointer;">
           <div class="card-body">
-            <h5 class="card-title">${aloja.ciudad}</h5>
-            <p class="card-text">
-              <mark>${aloja.noches} noches</mark><br>
-              <small class="text-muted">${aloja.zona}</small>
-            </p>
+            <span class="card-badge ${badgeClass}">${badgeLabel}</span>
+            <h5 class="card-title">${aloja.zona}</h5>
+            <p class="card-text">${aloja.check_in} → ${aloja.check_out}</p>
           </div>
         </div>`;
 
@@ -70,25 +74,33 @@ fetch("json/europa_2026.json")
 
     // ── Itinerario ──────────────────────────────────────────
     const itinerarioContainer = document.getElementById("itinerario-container");
-    viaje.itinerario.forEach((dia) => {
+    viaje.itinerario.forEach((dia, index) => {
       const actividades = dia.actividades ? dia.actividades.join("<br>") : "";
-      const traslado = dia.traslado ? `<b>Traslado:</b> ${dia.traslado}<br>` : "";
       const primeraActividad = dia.actividades ? dia.actividades[0] : "";
+      const trasladoTag = dia.traslado
+        ? `<div class="traslado-tag">🚌 ${dia.traslado}</div>`
+        : "";
 
       const col = document.createElement("div");
-      col.className = "col-md-4";
+      col.className = "col-md-4 col-sm-6";
       col.innerHTML = `
-        <div class="card mb-3" style="cursor:pointer;">
+        <div class="card h-100" style="cursor:pointer;">
           <div class="card-body">
-            <h5 class="card-title">${dia.fecha} - ${dia.ciudad}</h5>
-            <p class="card-text">${primeraActividad}...</p>
+            <div class="d-flex align-items-center gap-2 mb-1">
+              <div class="card-day-num">${index + 1}</div>
+              <span class="card-badge badge-itin mb-0">${dia.ciudad}</span>
+            </div>
+            <h5 class="card-title">${dia.fecha}</h5>
+            <p class="card-text">${primeraActividad}</p>
+            ${trasladoTag}
           </div>
         </div>`;
 
+      const traslado = dia.traslado ? `<b>Traslado:</b> ${dia.traslado}<br><br>` : "";
       const contenido = `${traslado}${actividades}`;
 
       col.querySelector(".card").addEventListener("click", () => {
-        mostrarModal(`${dia.fecha} - ${dia.ciudad}`, "", contenido);
+        mostrarModal(`${dia.fecha} — ${dia.ciudad}`, "", contenido);
       });
 
       itinerarioContainer.appendChild(col);

@@ -6,66 +6,83 @@
     <title>Europa 2026</title>
     <link rel="icon" type="image/png" href="assets/img/italia.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="overlay"></div>
 
+    <!-- Conversor de moneda flotante -->
     <div class="moneda-container">
         <input type="text" id="conversion" class="form-control text-center fw-bold" readonly>
     </div>
-    
-    <div class="encabezado">
-        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
-            <h1 class="fw-bold text-center text-md-start">Europa 2026</h1>
-            <div class="contador-container text-center text-md-end mt-3 mt-md-0">
-                <h2 class="fw-bold fs-5">Cuenta regresiva</h2>
-                <p id="contador" class="fs-6 fw-bold text-light"></p>
+
+    <!-- Header principal -->
+    <header class="encabezado">
+        <div class="container">
+            <div class="encabezado-inner">
+                <div class="encabezado-left">
+                    <p class="encabezado-eyebrow">18 mayo – 2 junio · 2026</p>
+                    <h1 class="encabezado-titulo">Europa 2026</h1>
+                    <div class="ciudades-pills">
+                        <span class="ciudad-pill">Madrid</span>
+                        <span class="ciudad-pill">Barcelona</span>
+                        <span class="ciudad-pill">Milán</span>
+                        <span class="ciudad-pill">Venecia</span>
+                        <span class="ciudad-pill">Roma</span>
+                        <span class="ciudad-pill">Valencia</span>
+                    </div>
+                </div>
+                <div class="encabezado-right">
+                    <p class="contador-label">Cuenta regresiva</p>
+                    <p id="contador" class="contador-valor"></p>
+                </div>
             </div>
         </div>
-    </div>
+    </header>
 
-    <div class="container mt-4">     
-        
-        <!-- Sección de Vuelos -->
-        <h2 class="fw-bold">Vuelos</h2>
-        <div class="row" id="vuelos-container"></div>
-        
-        <!-- Sección de Alojamiento -->
-        <h2 class="mt-4 fw-bold">Alojamiento</h2>
-        <div class="row" id="alojamiento-container"></div>
-        
-        <!-- Sección de Itinerario -->
-        <h2 class="mt-4 fw-bold">Itinerario</h2>
-        <div class="row" id="itinerario-container"></div>
+    <!-- Contenido principal -->
+    <div class="container main-content">
+
+        <!-- Vuelos -->
+        <h2 class="section-title">Vuelos</h2>
+        <div class="row g-3" id="vuelos-container"></div>
+
+        <!-- Alojamiento -->
+        <h2 class="section-title mt-5">Alojamiento</h2>
+        <div class="row g-3" id="alojamiento-container"></div>
+
+        <!-- Itinerario -->
+        <h2 class="section-title mt-5">Itinerario</h2>
+        <div class="row g-3" id="itinerario-container"></div>
+
     </div>
 
     <!-- Modal -->
     <div class="modal fade" id="detalleModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalTitle"></h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-custom">
+                <div class="modal-header modal-header-custom">
+                    <h5 class="modal-title modal-title-custom" id="modalTitle"></h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
-                <div class="modal-body">
-                    <!-- Imagen que se mostrará en el modal -->
-                    <img id="modalImagen" src="" alt="Imagen" class="img-fluid mb-3" style="display: none;">
-                    <!-- Contenido adicional -->
-                    <div id="modalBody"></div>
+                <div class="modal-body modal-body-custom">
+                    <img id="modalImagen" src="" alt="Imagen" class="img-fluid rounded mb-3" style="display:none;">
+                    <div id="modalBody" class="modal-text"></div>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container text-center">
-            <p>&copy; 2026 Leandro A. Manna - Todos los derechos reservados</p>
-            <p>Contacto: <a href="mailto:leandromanna@gmail.com">leandromanna@gmail.com</a></p>
+            <p class="mb-1">&copy; 2026 Leandro A. Manna</p>
+            <p class="mb-0"><a href="mailto:leandromanna@gmail.com">leandromanna@gmail.com</a></p>
         </div>
-    </footer>    
+    </footer>
 
-    <script src="js/index2.js"></script>    
+    <script src="js/index2.js"></script>
     <script src="js/contador.js"></script>
     <script src="js/conversor.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
