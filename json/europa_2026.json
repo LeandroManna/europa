@@ -4,7 +4,7 @@
     "fechas": {
       "salida": "18-05-2026",
       "llegada": "19-05-2026",
-      "regreso": "01-06-2026"
+      "regreso": "02-06-2026"
     },
     "vuelos": {
       "ida": {
@@ -31,174 +31,229 @@
     "alojamiento": [
       {
         "ciudad": "Madrid",
-        "zona": "Usera / Vallecas",
+        "zona": "Lavapiés / Atocha",
         "check_in": "19-05-2026",
-        "check_out": "21-05-2026",
-        "noches": 2,
-        "nota": "Zona económica con conexión directa de Metro al centro."
+        "check_out": "20-05-2026",
+        "noches": 1,
+        "nota": "Zona céntrica y económica, cerca de Atocha para tomar el tren nocturno a Barcelona. Hostels o pensiones desde ~20-35 USD/noche.",
+        "sugerencia": true
       },
       {
         "ciudad": "Barcelona",
-        "zona": "L'Hospitalet de Llobregat",
-        "check_in": "21-05-2026",
-        "check_out": "24-05-2026",
+        "zona": "L'Hospitalet de Llobregat / Sant Antoni",
+        "check_in": "20-05-2026",
+        "check_out": "23-05-2026",
         "noches": 3,
-        "nota": "Cerca del Camp Nou y con Metro directo a Plaza Cataluña."
+        "nota": "L'Hospitalet tiene metro directo a Plaza Cataluña y precios muy accesibles. Sant Antoni es más central pero algo más caro. Hostels desde ~20-30 USD, habitaciones desde ~50-70 USD.",
+        "sugerencia": true
       },
       {
         "ciudad": "Milán",
-        "zona": "Sesto San Giovanni",
-        "check_in": "24-05-2026",
-        "check_out": "27-05-2026",
+        "zona": "Sesto San Giovanni / Loreto",
+        "check_in": "23-05-2026",
+        "check_out": "26-05-2026",
         "noches": 3,
-        "nota": "Base estratégica para ir al Lago di Como y Alpes Suizos."
+        "nota": "Sesto San Giovanni conecta en metro directamente al centro. Loreto es ya dentro de la ciudad, más cómodo. Hostels desde ~25-35 USD, habitaciones desde ~55-80 USD.",
+        "sugerencia": true
+      },
+      {
+        "ciudad": "Mestre / Venecia",
+        "zona": "Mestre (tierra firme)",
+        "check_in": "26-05-2026",
+        "check_out": "27-05-2026",
+        "noches": 1,
+        "nota": "Mestre es la opción económica obligada: Venecia isla es carísima. Tren directo a Venezia Santa Lucia en 10 min. Hostels desde ~25 USD, habitaciones desde ~45-60 USD.",
+        "sugerencia": true
       },
       {
         "ciudad": "Roma",
-        "zona": "Via Tiburtina / Ostiense",
-        "check_in": "27-05-2026",
+        "zona": "Tiburtina / Ostiense / Pigneto",
+        "check_in": "28-05-2026",
         "check_out": "31-05-2026",
-        "noches": 4,
-        "nota": "Zona con excelentes precios y conexión de tren/metro."
+        "noches": 3,
+        "nota": "Tiburtina es donde llega el bus nocturno desde Venecia. Pigneto es barrio joven y económico con metro. Hostels desde ~20-30 USD, habitaciones desde ~50-75 USD.",
+        "sugerencia": true
       },
       {
-        "ciudad": "Madrid",
-        "zona": "Cerca de Aeropuerto / Barajas",
+        "ciudad": "Valencia",
+        "zona": "Centro / Ruzafa",
         "check_in": "31-05-2026",
         "check_out": "01-06-2026",
         "noches": 1,
-        "nota": "Noche final para asegurar el vuelo de regreso."
+        "nota": "Ruzafa es el barrio más trendy y accesible de Valencia. Bien conectado a la estación de tren. Hostels desde ~20 USD, habitaciones desde ~45-65 USD.",
+        "sugerencia": true
       }
     ],
     "itinerario": [
       {
         "fecha": "Martes 19-05",
         "ciudad": "Madrid",
+        "traslado": null,
+        "tiempo": null,
         "actividades": [
-          "Llegada a Madrid Barajas (14:05)",
-          "Traslado y check-in en zona Usera/Vallecas",
-          "Paseo por Gran Vía y Puerta del Sol"
+          "14:05 – Llegada al Aeropuerto Barajas",
+          "~15:00 – Salida hacia el centro (30–40 min en metro/tren)",
+          "Check-in en alojamiento",
+          "Puerta del Sol",
+          "Plaza Mayor",
+          "Gran Vía"
         ]
       },
       {
         "fecha": "Miércoles 20-05",
-        "ciudad": "Madrid",
+        "ciudad": "Madrid → Barcelona",
+        "traslado": "Tren nocturno Madrid–Barcelona · 20:30 hs · USD 44 · ~2h30",
+        "tiempo": "2h30",
         "actividades": [
-          "Tour del Estadio Santiago Bernabéu",
-          "Paseo por el Parque del Retiro",
-          "Tarde de tapas en Mercado de San Miguel"
+          "Estadio Santiago Bernabéu (mañana)",
+          "Parque del Retiro",
+          "Palacio Real de Madrid",
+          "20:30 – Tren a Barcelona (USD 44, ~2h30)"
         ]
       },
       {
         "fecha": "Jueves 21-05",
         "ciudad": "Barcelona",
-        "traslado": "Tren Alta Velocidad Low Cost (Ouigo/Iryo)",
+        "traslado": null,
+        "tiempo": null,
         "actividades": [
-          "Llegada a Barcelona Sants",
-          "Check-in en L'Hospitalet",
-          "Paseo por Las Ramblas y Barrio Gótico"
+          "Llegada de madrugada → mañana tranquila",
+          "Check-in en alojamiento",
+          "Tarde: La Rambla",
+          "Mercado de La Boquería"
         ]
       },
       {
         "fecha": "Viernes 22-05",
         "ciudad": "Barcelona",
+        "traslado": null,
+        "tiempo": null,
         "actividades": [
-          "Camp Nou (Museo y Experiencia Inmersiva)",
-          "Visita a la Sagrada Familia (Exterior)",
-          "Atardecer en los Búnkers del Carmel"
+          "Sagrada Familia",
+          "Park Güell",
+          "Casa Batlló"
         ]
       },
       {
         "fecha": "Sábado 23-05",
-        "ciudad": "Barcelona",
+        "ciudad": "Barcelona → Milán",
+        "traslado": "Vuelo Barcelona–Milán · 13:30 → 15:00 · USD 39",
+        "tiempo": "1h30",
         "actividades": [
-          "Día de playa en la Barceloneta",
-          "Parque Güell",
-          "Cena en el barrio de Gràcia"
+          "Mañana libre en Barcelona",
+          "13:30 – Vuelo a Milán (USD 39)",
+          "15:00 – Llegada a Milán",
+          "Tarde: Duomo di Milano",
+          "Galería Vittorio Emanuele II"
         ]
       },
       {
         "fecha": "Domingo 24-05",
         "ciudad": "Milán",
-        "traslado": "Vuelo Low Cost (Ryanair/Vueling) BCN-Milán",
+        "traslado": null,
+        "tiempo": null,
         "actividades": [
-          "Check-in en Sesto San Giovanni",
-          "Visita al Duomo de Milán y Galería Vittorio Emanuele II",
-          "Cena en Navigli"
+          "Día base en Milán",
+          "Opcional: adelantar visita al Lago di Como",
+          "Navigli (canales y gastronomía)",
+          "Castello Sforzesco"
         ]
       },
       {
         "fecha": "Lunes 25-05",
         "ciudad": "Lago di Como",
-        "traslado": "Tren regional Milán-Varenna (1h)",
+        "traslado": "Tren regional Milán–Como · ~1h",
+        "tiempo": "1h",
         "actividades": [
-          "Recorrido por Varenna",
-          "Ferry a Bellagio",
+          "Tren a Como (~1h desde Milán)",
+          "Recorrido por Varenna o Bellagio",
+          "Ferry entre pueblos del lago",
           "Regreso a dormir a Milán (sin valijas)"
         ]
       },
       {
         "fecha": "Martes 26-05",
-        "ciudad": "Alpes Suizos",
-        "traslado": "Tren Milán-Tirano + Bernina Express",
+        "ciudad": "Milán → Mestre / Venecia",
+        "traslado": "Bus Milán–Mestre · 08:15 → 11:45 · USD 9 · ~3h45",
+        "tiempo": "3h45",
         "actividades": [
-          "Cruce de los Alpes en tren panorámico",
-          "Visita a St. Moritz (Suiza)",
-          "Regreso a dormir a Milán (sin valijas)"
+          "08:15 – Bus a Mestre (USD 9, ~3h45)",
+          "11:45 – Llegada a Mestre",
+          "Cruce a Venecia en tren (10 min)",
+          "Plaza de San Marcos",
+          "Puente de Rialto"
         ]
       },
       {
         "fecha": "Miércoles 27-05",
-        "ciudad": "Roma",
-        "traslado": "Tren rápido Italo Milán-Roma (3h)",
+        "ciudad": "Venecia → Roma (bus nocturno)",
+        "traslado": "Bus nocturno Venecia–Roma · 23:30 · USD 19 · ~6h40–8h",
+        "tiempo": "~7h promedio",
         "actividades": [
-          "Llegada a Roma Tiburtina",
-          "Fontana di Trevi y Panteón",
-          "Piazza Navona"
+          "Basílica de San Marcos",
+          "Canal Grande en vaporetto",
+          "Barrio de Cannaregio",
+          "23:30 – Bus nocturno a Roma (USD 19) · ahorrás hotel + traslado ✔️"
         ]
       },
       {
         "fecha": "Jueves 28-05",
         "ciudad": "Roma",
+        "traslado": "Llegada en bus nocturno · 06:10 hs",
+        "tiempo": null,
         "actividades": [
-          "Coliseo Romano y Foro Romano",
-          "Monte Palatino",
-          "Cena en el barrio de Trastevere"
+          "06:10 – Llegada a Roma Tiburtina",
+          "⚠️ Llegás cansado → día liviano",
+          "Guardá las valijas en consigna",
+          "Fontana di Trevi",
+          "Panteón",
+          "Paseo tranquilo por el centro"
         ]
       },
       {
         "fecha": "Viernes 29-05",
         "ciudad": "Roma",
+        "traslado": null,
+        "tiempo": null,
         "actividades": [
-          "Museos Vaticanos y Capilla Sixtina",
-          "Basílica de San Pedro",
-          "Castel Sant'Angelo"
+          "Coliseo Romano",
+          "Foro Romano",
+          "Monte Palatino"
         ]
       },
       {
         "fecha": "Sábado 30-05",
         "ciudad": "Roma",
+        "traslado": null,
+        "tiempo": null,
         "actividades": [
-          "Día libre para compras o Villa Borghese",
-          "Opcional: Catacumbas de Roma",
-          "Última cena italiana"
+          "Ciudad del Vaticano",
+          "Basílica de San Pedro",
+          "Castel Sant'Angelo"
         ]
       },
       {
         "fecha": "Domingo 31-05",
-        "ciudad": "Madrid",
-        "traslado": "Vuelo Roma-Madrid (Omio, 40 USD)",
+        "ciudad": "Roma → Valencia",
+        "traslado": "Vuelo Roma–Valencia · 12:35 → 14:45 · USD 108",
+        "tiempo": "2h10",
         "actividades": [
-          "Llegada a Madrid y check-in cerca del aeropuerto",
-          "Última caminata por Madrid y compras de último minuto"
+          "Mañana libre o última vuelta por Roma",
+          "12:35 – Vuelo a Valencia (USD 108)",
+          "14:45 – Llegada a Valencia",
+          "Ciudad de las Artes y las Ciencias",
+          "Paseo liviano por Ruzafa"
         ]
       },
       {
         "fecha": "Lunes 01-06",
-        "ciudad": "Regreso",
+        "ciudad": "Valencia → Madrid → Regreso",
+        "traslado": "Tren Valencia–Madrid · 06:30 → 08:40 · USD 19",
+        "tiempo": "2h10",
         "actividades": [
+          "06:30 – Tren a Madrid (USD 19, llegada 08:40)",
           "Traslado al Aeropuerto Barajas",
-          "Vuelo de salida (14:45)"
+          "14:45 – Vuelo de regreso a Buenos Aires"
         ]
       }
     ]
