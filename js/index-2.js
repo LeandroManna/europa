@@ -1,41 +1,71 @@
-fetch("json/europa_2026.json")
+fetch("json/europa-2.json")
   .then((response) => response.json())
   .then((data) => {
     const viaje = data.viaje;
 
     // ── Vuelos ──────────────────────────────────────────────
     const vuelosContainer = document.getElementById("vuelos-container");
-    Object.keys(viaje.vuelos).forEach((tipo) => {
-      const vuelo = viaje.vuelos[tipo];
-      const label = tipo.charAt(0).toUpperCase() + tipo.slice(1);
 
-      const col = document.createElement("div");
-      col.className = "col-md-6";
-      col.innerHTML = `
-        <div class="card h-100" style="cursor:pointer;">
-          <div class="card-body">
-            <span class="card-badge badge-vuelo">${label}</span>
-            <h5 class="card-title">${vuelo.origen} → ${vuelo.destino}</h5>
-            <p class="card-text">${vuelo.aerolinea}</p>
-            <p class="card-text"><b>${vuelo.horario_salida}</b></p>
-            <p class="card-subtitle">Escala: ${vuelo.escala} · ${vuelo.duracion_total}</p>
+    Object.keys(viaje.vuelos).forEach((familiaKey) => {
+      const familia = viaje.vuelos[familiaKey];
+      const esFamilia1 = familiaKey === "familia1";
+
+      // Encabezado de grupo
+      const grupoHeader = document.createElement("div");
+      grupoHeader.className = "col-12 mt-3 mb-1";
+      grupoHeader.innerHTML = `
+        <div class="familia-header ${esFamilia1 ? "familia1" : "familia2"}">
+          <span class="familia-icon">${esFamilia1 ? "✈" : "🛫"}</span>
+          <div>
+            <span class="familia-nombre">${familia.nombre}</span>
+            <span class="familia-integrantes">${familia.integrantes}</span>
           </div>
         </div>`;
+      vuelosContainer.appendChild(grupoHeader);
 
-      const contenido = `
-        <b>Aerolínea:</b> ${vuelo.aerolinea}<br>
-        <b>Origen:</b> ${vuelo.origen}<br>
-        <b>Escala:</b> ${vuelo.escala}<br>
-        <b>Destino:</b> ${vuelo.destino}<br>
-        <b>Salida:</b> ${vuelo.horario_salida}<br>
-        <b>Llegada:</b> ${vuelo.horario_llegada}<br>
-        <b>Duración total:</b> ${vuelo.duracion_total}`;
+      // Cards ida y regreso
+      ["ida", "regreso"].forEach((tipo) => {
+        const vuelo = familia[tipo];
+        const label = tipo.charAt(0).toUpperCase() + tipo.slice(1);
+        const badgeClass = esFamilia1 ? "badge-vuelo-f1" : "badge-vuelo-f2";
+        const escalaTexto = vuelo.escala ? `Escala: ${vuelo.escala} · ` : "Vuelo directo · ";
 
-      col.querySelector(".card").addEventListener("click", () => {
-        mostrarModal(`Vuelo ${label} — ${vuelo.origen} → ${vuelo.destino}`, vuelo.imagen || "", contenido);
+        const col = document.createElement("div");
+        col.className = "col-md-6";
+        col.innerHTML = `
+          <div class="card h-100" style="cursor:pointer;">
+            <div class="card-body">
+              <span class="card-badge ${badgeClass}">${label}</span>
+              <h5 class="card-title">${vuelo.origen} → ${vuelo.destino}</h5>
+              <p class="card-text">${vuelo.aerolinea}</p>
+              <p class="card-text"><b>${vuelo.horario_salida}</b></p>
+              <p class="card-subtitle">${escalaTexto}${vuelo.duracion_total}</p>
+            </div>
+          </div>`;
+
+        const escalaModal = vuelo.escala
+          ? `<b>Escala:</b> ${vuelo.escala}<br>`
+          : `<b>Ruta:</b> Vuelo directo<br>`;
+
+        const contenido = `
+          <b>Aerolínea:</b> ${vuelo.aerolinea}<br>
+          <b>Origen:</b> ${vuelo.origen}<br>
+          ${escalaModal}
+          <b>Destino:</b> ${vuelo.destino}<br>
+          <b>Salida:</b> ${vuelo.horario_salida}<br>
+          <b>Llegada:</b> ${vuelo.horario_llegada}<br>
+          <b>Duración total:</b> ${vuelo.duracion_total}`;
+
+        col.querySelector(".card").addEventListener("click", () => {
+          mostrarModal(
+            `${familia.nombre} — Vuelo ${label}`,
+            vuelo.imagen || "",
+            contenido
+          );
+        });
+
+        vuelosContainer.appendChild(col);
       });
-
-      vuelosContainer.appendChild(col);
     });
 
     // ── Alojamientos ────────────────────────────────────────

@@ -7,25 +7,53 @@
       "regreso": "02-06-2026"
     },
     "vuelos": {
-      "ida": {
-        "origen": "Buenos Aires (EZE)",
-        "escala": "Santiago (SCL)",
-        "destino": "Madrid (MAD)",
-        "horario_salida": "Lunes 18-05-2026 12:15",
-        "duracion_total": "20 h 50 min",
-        "horario_llegada": "Martes 19-05-2026 14:05",
-        "aerolinea": "LATAM Airlines",
-        "imagen": "assets/img/avionlatam.jpg"
+      "familia1": {
+        "nombre": "Familia 1",
+        "integrantes": "Gonzalo, Eugenia, Maxi, Pía",
+        "ida": {
+          "origen": "Asunción (ASU)",
+          "escala": null,
+          "destino": "Madrid (MAD)",
+          "horario_salida": "Domingo 17-05-2026 12:50",
+          "duracion_total": "11h 05min",
+          "horario_llegada": "Lunes 18-05-2026 04:55",
+          "aerolinea": "Air Europa",
+          "imagen": ""
+        },
+        "regreso": {
+          "origen": "Madrid (MAD)",
+          "escala": null,
+          "destino": "Asunción (ASU)",
+          "horario_salida": "Lunes 01-06-2026 23:45",
+          "duracion_total": "11h 40min",
+          "horario_llegada": "Martes 02-06-2026 06:25",
+          "aerolinea": "Air Europa",
+          "imagen": ""
+        }
       },
-      "regreso": {
-        "origen": "Madrid (MAD)",
-        "escala": "São Paulo (GRU)",
-        "destino": "Buenos Aires (EZE)",
-        "horario_salida": "Lunes 01-06-2026 14:45",
-        "duracion_total": "15 h 15 min",
-        "horario_llegada": "Martes 02-06-2026 01:00",
-        "aerolinea": "LATAM Airlines",
-        "imagen": "assets/img/avionlatam2.jpg"
+      "familia2": {
+        "nombre": "Familia 2",
+        "integrantes": "Leandro, Mariela, Nico",
+        "ida": {
+          "origen": "Buenos Aires (EZE)",
+          "escala": "Santiago (SCL)",
+          "destino": "Madrid (MAD)",
+          "horario_salida": "Lunes 18-05-2026 12:15",
+          "duracion_total": "20h 50min",
+          "horario_llegada": "Martes 19-05-2026 14:05",
+          "aerolinea": "LATAM Airlines",
+          "imagen": "assets/img/avionlatam.jpg"
+        },
+        "regreso": {
+          "origen": "Madrid (MAD)",
+          "escala": "São Paulo (GRU)",
+          "destino": "Buenos Aires (EZE)",
+          "horario_salida": "Lunes 01-06-2026 14:45",
+          "duracion_total": "15h 15min",
+          "horario_llegada": "Martes 02-06-2026 01:00",
+          "aerolinea": "LATAM Airlines",
+          "imagen": "assets/img/avionlatam2.jpg"
+        }
       }
     },
     "alojamiento": [

@@ -1,0 +1,23 @@
+# ── Archivos alternativos / versiones viejas ──────────────
+css/style.css
+js/index.js
+js/index2.js
+json/europa_2026.json
+json/viaje_italia.json
+
+# ── Imágenes no usadas en la versión activa ────────────────
+assets/img/florencia.jpg
+assets/img/milan.jpg
+assets/img/napoles.jpg
+assets/img/roma.jpg
+assets/img/venecia.jpg
+assets/img/europa.png
+
+# ── Sistema operativo ──────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Editores ───────────────────────────────────────────────
+.vscode/
+*.code-workspace

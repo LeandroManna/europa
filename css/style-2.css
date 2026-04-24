@@ -5,17 +5,25 @@
 
 /* ── Variables ─────────────────────────────── */
 :root {
-    --gold:        #c8a84b;
-    --gold-light:  #f0d98a;
-    --navy:        #0a1628;
-    --navy-mid:    #1a3a5c;
-    --glass-bg:    rgba(255, 255, 255, 0.68);
-    --glass-border:rgba(255, 255, 255, 0.45);
-    --card-radius: 14px;
-    --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.10);
-    --shadow-hover: 0 10px 32px rgba(0, 0, 0, 0.18);
-    --font-title:  'Playfair Display', Georgia, serif;
-    --font-body:   'DM Sans', system-ui, sans-serif;
+    --gold:          #c8a84b;
+    --gold-light:    #f0d98a;
+    --navy:          #0a1628;
+    --navy-mid:      #1a3a5c;
+    --glass-bg:      rgba(255, 255, 255, 0.68);
+    --glass-border:  rgba(255, 255, 255, 0.45);
+    --card-radius:   14px;
+    --shadow-card:   0 4px 20px rgba(0, 0, 0, 0.10);
+    --shadow-hover:  0 10px 32px rgba(0, 0, 0, 0.18);
+    --font-title:    'Playfair Display', Georgia, serif;
+    --font-body:     'DM Sans', system-ui, sans-serif;
+
+    /* Colores por familia */
+    --f1-color:      #1a4a8a;
+    --f1-bg:         #ddeeff;
+    --f1-accent:     #2d6bbf;
+    --f2-color:      #6b1a6b;
+    --f2-bg:         #f5e0f5;
+    --f2-accent:     #9c3d9c;
 }
 
 /* ── Reset base ────────────────────────────── */
@@ -88,7 +96,6 @@ body::before {
     overflow: hidden;
 }
 
-/* Patrón de puntos sutil */
 .encabezado::before {
     content: '';
     position: absolute;
@@ -98,7 +105,6 @@ body::before {
     pointer-events: none;
 }
 
-/* Línea dorada inferior */
 .encabezado::after {
     content: '';
     position: absolute;
@@ -134,7 +140,6 @@ body::before {
     line-height: 1.1;
 }
 
-/* Pills de ciudades */
 .ciudades-pills {
     display: flex;
     flex-wrap: wrap;
@@ -158,11 +163,7 @@ body::before {
     border-color: var(--gold);
 }
 
-/* Contador */
-.encabezado-right {
-    text-align: right;
-    flex-shrink: 0;
-}
+.encabezado-right { text-align: right; flex-shrink: 0; }
 
 .contador-label {
     font-size: 0.65rem;
@@ -228,7 +229,45 @@ body::before {
 
 .card-body { padding: 1rem 1.1rem; }
 
-/* ── Badge de tipo ─────────────────────────── */
+/* ── Encabezado de grupo de familia ────────── */
+.familia-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    border-radius: 10px;
+    margin-bottom: 4px;
+}
+
+.familia-header.familia1 {
+    background: rgba(29, 78, 170, 0.18);
+    border-left: 3px solid var(--f1-accent);
+}
+
+.familia-header.familia2 {
+    background: rgba(156, 61, 156, 0.18);
+    border-left: 3px solid var(--f2-accent);
+}
+
+.familia-icon {
+    font-size: 1.3rem;
+}
+
+.familia-nombre {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+.familia-integrantes {
+    display: block;
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.6);
+    margin-top: 1px;
+}
+
+/* ── Badges ────────────────────────────────── */
 .card-badge {
     display: inline-block;
     font-size: 0.62rem;
@@ -240,12 +279,18 @@ body::before {
     margin-bottom: 8px;
 }
 
-.badge-vuelo  { background: #ddeeff; color: #0d4a8a; }
-.badge-aloj   { background: #fef3dc; color: #7a4f00; }
-.badge-aloj-sug { background: #fff8ec; color: #a06000; border: 1px dashed #c8a84b; }
-.badge-itin   { background: #e6f7ee; color: #0f5a32; }
+/* Vuelos por familia */
+.badge-vuelo-f1 { background: var(--f1-bg); color: var(--f1-color); }
+.badge-vuelo-f2 { background: var(--f2-bg); color: var(--f2-color); }
 
-/* ── Número de día en itinerario ───────────── */
+/* Alojamiento */
+.badge-aloj     { background: #fef3dc; color: #7a4f00; }
+.badge-aloj-sug { background: #fff8ec; color: #a06000; border: 1px dashed var(--gold); }
+
+/* Itinerario */
+.badge-itin     { background: #e6f7ee; color: #0f5a32; }
+
+/* ── Número de día ─────────────────────────── */
 .card-day-num {
     width: 30px;
     height: 30px;
@@ -275,7 +320,7 @@ body::before {
     font-weight: 500;
 }
 
-/* ── Títulos y texto de cards ──────────────── */
+/* ── Texto de cards ────────────────────────── */
 .card .card-title {
     font-family: var(--font-body);
     font-size: 0.92rem;
@@ -297,7 +342,11 @@ body::before {
     margin-top: 3px;
 }
 
-/* ── Modal personalizado ───────────────────── */
+/* ── Borde lateral de color por familia en cards ── */
+.card.f1 { border-left: 3px solid var(--f1-accent) !important; }
+.card.f2 { border-left: 3px solid var(--f2-accent) !important; }
+
+/* ── Modal ─────────────────────────────────── */
 .modal-custom {
     border: none;
     border-radius: 16px;
@@ -356,8 +405,85 @@ body::before {
 
 /* ── Responsive ────────────────────────────── */
 @media (max-width: 767px) {
-    .encabezado-inner { flex-direction: column; }
-    .encabezado-right { text-align: left; }
-    .moneda-container { width: 130px; top: 8px; right: 10px; }
-    .section-title { font-size: 1.3rem; }
+    .encabezado-inner    { flex-direction: column; }
+    .encabezado-right    { text-align: left; }
+    .moneda-container    { width: 130px; top: 8px; right: 10px; }
+    .section-title       { font-size: 1.3rem; }
+    .familia-integrantes { display: none; }
+}
+
+/* ── Contadores por familia ────────────────── */
+
+.contadores-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.contador-bloque {
+    padding: 8px 14px;
+    border-radius: 10px;
+}
+
+.contador-bloque.familia1 {
+    background: rgba(29, 78, 170, 0.18);
+    border-left: 3px solid var(--f1-accent);
+}
+
+.contador-bloque.familia2 {
+    background: rgba(156, 61, 156, 0.18);
+    border-left: 3px solid var(--f2-accent);
+}
+
+.contador-label {
+    font-size: 0.62rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0 0 3px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 6px;
+}
+
+.contador-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.dot-f1 { background: var(--f1-accent); }
+.dot-f2 { background: var(--f2-accent); }
+
+.contador-valor {
+    font-family: var(--font-title);
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: var(--gold-light);
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* Responsive contadores */
+@media (max-width: 767px) {
+    .contadores-wrap  { text-align: left; width: 100%; }
+    .contador-label   { justify-content: flex-start; }
+    .contador-bloque  { border-left: none; border-top: 3px solid; padding: 8px 10px; }
+    .contador-bloque.familia1 { border-color: var(--f1-accent); }
+    .contador-bloque.familia2 { border-color: var(--f2-accent); }
+}
+
+/* Fix Safari iOS – contador-valor */
+#contador-f1,
+#contador-f2 {
+    color: #f0d98a !important;   /* gold-light en valor fijo, sin variable */
+    font-size: 0.95rem !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
