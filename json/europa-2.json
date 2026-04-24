@@ -18,7 +18,7 @@
           "duracion_total": "11h 05min",
           "horario_llegada": "Lunes 18-05-2026 04:55",
           "aerolinea": "Air Europa",
-          "imagen": ""
+          "imagen": "assets/img/avionlatam.jpg"
         },
         "regreso": {
           "origen": "Madrid (MAD)",
@@ -28,7 +28,7 @@
           "duracion_total": "11h 40min",
           "horario_llegada": "Martes 02-06-2026 06:25",
           "aerolinea": "Air Europa",
-          "imagen": ""
+          "imagen": "assets/img/avionlatam2.jpg"
         }
       },
       "familia2": {
