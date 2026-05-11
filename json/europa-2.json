@@ -59,12 +59,12 @@
     "alojamiento": [
       {
         "ciudad": "Madrid",
-        "zona": "Tetuan",
+        "zona": "Tetuan / Alfalfa B Apartments",
         "check_in": "18-05-2026",
         "check_out": "20-05-2026",
         "noches": 2,
-        "nota": "Zona residencial ubicada al norte del centro, a unos 25-30 minutos del centro (Sol/Callao) y a unos 2,8 km del Estadio Santiago Bernabéu. ~20 USD/noche/persona.",
-        "sugerencia": true
+        "nota": "Zona residencial ubicada al norte del centro, a unos 25-30 minutos del centro (Sol/Callao) y a unos 2,8 km del Estadio Santiago Bernabéu. ~20 USD/noche/persona. Teléfono: +34690372267",
+        "sugerencia": false
       },
       {
         "ciudad": "Barcelona",
