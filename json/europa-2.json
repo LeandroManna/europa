@@ -59,11 +59,11 @@
     "alojamiento": [
       {
         "ciudad": "Madrid",
-        "zona": "Lavapiés / Atocha",
-        "check_in": "19-05-2026",
+        "zona": "Tetuan",
+        "check_in": "18-05-2026",
         "check_out": "20-05-2026",
-        "noches": 1,
-        "nota": "Zona céntrica y económica, cerca de Atocha para tomar el tren nocturno a Barcelona. Hostels o pensiones desde ~20-35 USD/noche.",
+        "noches": 2,
+        "nota": "Zona residencial ubicada al norte del centro, a unos 25-30 minutos del centro (Sol/Callao) y a unos 2,8 km del Estadio Santiago Bernabéu. ~20 USD/noche/persona.",
         "sugerencia": true
       },
       {
